@@ -1,0 +1,41 @@
+
+<div class="column-wrapper">
+  <div class="left-column">
+  </div>
+  <div class="center-column">
+    <%= form_for @user, remote: true do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this information from being saved:</h2>
+
+          <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %> </li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name, :placeholder => "Joe", required: true, :pattern => "[A-Za-z]+", :title => "Your Name" %>
+      </div>
+      <div class="field">
+        <%= f.label :annual_income %><br>
+        <%= f.text_field :annual_income, :placeholder => "100000", :required => true, :pattern => "[0-9]+", :title => "Enter Numbers Only" %>
+      </div>
+      <div class="field">
+        <%= f.label :current_savings %><br>
+        <%= f.text_field :current_savings, :placeholder => "20000", :required => true, :pattern => "[0-9]+", :title => "Enter Numbers Only" %>
+      </div>
+      <div class="field">
+        <%= f.label :retirement_savings %><br>
+        <%= f.text_field :retirement_savings, :placeholder => "30000", :required => true, :pattern => "[0-9]+", :title => "Enter Numbers Only" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Get Quote"%>
+      </div>
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,92 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  background-color: #66C8C9;
+  color: #ffffff;
+  font-family: 'Times New Roman', Georgia, serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  margin-top: 80px;
+  padding-top: 20px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+#error-explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  color: #0a38c6;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #e0e5f2;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+
+.column-wrapper {
+  width: 100%;
+}
+
+.left-column, .center-column, .right-column {
+  width:33%;
+  margin:0 10px;
+  padding:10px;
+  }
+
+.left-column {
+  float: left;
+}
+
+.center-column {
+  float: left;
+  text-align: left;
+}
+
+.right-column {
+  float:right;
+}
+
+#ajax {
+  font-size: 18px;
+  text-align: left;
+  width: 200px;
+  line-height: 22px;
+}

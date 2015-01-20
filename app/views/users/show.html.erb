@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Annual income:</strong>
+  <%= number_to_currency(@user.annual_income) %>
+</p>
+
+<p>
+  <strong>Current savings:</strong>
+  <%= number_to_currency(@user.current_savings) %>
+</p>
+
+<p>
+  <strong>Retirement savings:</strong>
+  <%= number_to_currency(@user.retirement_savings) %>
+</p>
+
+<p>
+  <strong>The recommended insurance for <%= @user.name %> is <%= number_to_currency(@user.get_quote) %>.</strong>
+</p>
+<p>
+  You should get some insurance.
+</p>
+
+<%= link_to 'Back', new_user_path %>
